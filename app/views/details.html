@@ -1,0 +1,36 @@
+<div class="container jumbotron">
+   <div class="col-md-3"><img data-src="holder.js/200x200" ng-src="{{showImage}}" class="img-thumbnail" alt="200x200" style="width: 200px; height: 200px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzIwMHgyMDAKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNGU0NzdmNzc1MCB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE0ZTQ3N2Y3NzUwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9Ijc0LjA1NDY4NzUiIHk9IjEwNC41Ij4yMDB4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true"></div>
+   <div class="row">
+      <div class="col-md-8">
+         <div class="row">
+            <div class="col-md-4">
+               <h4>{{showTitle}}</h4>
+            </div>
+            <div class="col-md-4">
+               <span class="label label-success">{{showStatus}}</span>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-4">{{showGenres}}</div>
+            <div class="col-md-4">
+               <strong>{{showNetW}}</strong>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <span ng-bind-html="showDesc"></span>
+      </div>
+   </div>
+   <div class="col-md-3">
+   </div>
+</div>
+<div class="container jumbotron">
+    <section class="container-fluid" ng-controller="DetailsCtrl as Chartist">
+       <div class="panel-heading">
+                        <h3 class="panel-title">Rating Timeseries for Show</h3>
+                    </div>
+            <div class="col-md-6">
+                        <chartist class="ct-chart ct-golden-section" chartist-data="Chartist.lineData" chartist-chart-type="Line" chartist-chart-options="Chartist.lineOptions"></chartist>
+            </div>
+        </div>
+</div>
