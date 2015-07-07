@@ -1,22 +1,24 @@
 'use strict';
 
-describe('Controller: AboutCtrl', function () {
+describe('Controller: DetailsCtrl', function () {
 
   // load the controller's module
   beforeEach(module('ohmyshowApp'));
 
-  var AboutCtrl,
+  var DetailsCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    AboutCtrl = $controller('AboutCtrl', {
+    DetailsCtrl = $controller('DetailsCtrl', {
       $scope: scope
     });
+    scope.awesomeThings = "Hello";
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+    console.log("Awesome things "+scope.awesomeThings.length);
+    expect(scope.awesomeThings).to.equal("Hello");
   });
 });

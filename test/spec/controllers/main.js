@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('MainCtrl', function () {
 
   // load the controller's module
   beforeEach(module('ohmyshowApp'));
@@ -14,9 +14,10 @@ describe('Controller: MainCtrl', function () {
     MainCtrl = $controller('MainCtrl', {
       $scope: scope
     });
+    scope.tvShows = "something";
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('Should contain a list of tv shows', function () {
+    expect(scope.tvShows).to.not.equal(null);
   });
 });
